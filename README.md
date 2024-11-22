@@ -1,5 +1,6 @@
-# home-based-workers
+# Home-based Workers: An Exploration of Trends in Remote Workers in the US
 
+## The Task
 For this project, we are analyzing data from the Census Bureau to answer these following questions:
 
 1) What are the most popular remote job fields?
@@ -7,18 +8,43 @@ For this project, we are analyzing data from the Census Bureau to answer these f
 3) How does the percentage of remote workers relate to the median household income across different states in 2022?
 4) Have the numbers of female and male workers working from home changed over time?
 
-To answer the question number 2 - 
+## How to Use
+To determine the most popular remote job fields, begin by running the [SIPP compiler file](/SIPP_compiler.ipynb).
+This file makes the API calls to the Survey of Income and Program Participation 2022 database.
+In order to make these API calls, you will need a US Census API key, which can be easily acquired from the US Census website [here](https://api.census.gov/data/key_signup.html).
 
-Run the Census_ACS_Data.ipynb file from step 1 to 7 to see how we analyized the data.
+* You will either need to create a file in the main directory called $${\color{red}config.py}$$.
+* Inside of your new config.py file, you will need to put the following code, replacing the text in the quotes with your API key:
+```
+api_key = "YOUR KEY HERE"
+```
+* To ensure every aspect was considered, over 120 API calls were made, so it may take a while for all of them to run.
+* Running this will export a CSV file called [full_worker_set](./Resources/full_worker_set.csv) into the Resources folder.
+  * This contains all of the data necessary for running the statistics, but with a significantly reduced file-read time.
+* Now, we can quickly pull our API data from the generated CSV file by running the [SIPP main file](/SIPP_main.ipynb)
+  * This will also generate an intermediary CSV with income data for future statistical analysis.
+* At the bottom of the file, you will find pie charts looking at worker class, occupation type, and industry type for home-based workers. The summary pie charts are as follows:
+Percentages of Home-based Worker Classes
+![A pie chart showing percentages of home-based worker classes.](./Resources/worker-class-pie-chart.png)
+Percentages of Home-based Workers' Top Occupation Types
+![A pie chart showing percentages of home-based workers' occupation types.](./Resources/occupation-type-pie-chart.png)
+Percentages of Home-based Workers' Top Industry Types
+![A pie chart showing percentages of home-based workers' industry types.](./Resources/industry-type-pie-chart.png)
+
+To answer question number 2 - 
+
+Run the Census_ACS_Data.ipynb file from step 1 to 7 to see how we analyzed the data.
 Run the Census_ACS_Data.ipynb file from step 8 to 10 to see how we created bar graph.
 
-To answer the question number 4 -
+To answer question number 4 -
 
-Run the Census_ACS_Data.ipynb file from step 11 to 13 to see how we analyized the data.
+Run the Census_ACS_Data.ipynb file from step 11 to 13 to see how we analyzed the data.
 Run the Census_ACS_Data.ipynb file from step 14 to 17 to see how to see how we did a line regression.
 
-We also wrote down our analysis and conclusions. To read the report, please read our Remote Workers Analysis And Conclusion Report.
+## Conclusions
+To read the full report of our conclusions, please refer to our [Remote Workers Analysis And Conclusion Report](./Analysis/Analysis%20and%20conclusion.pdf).
 
+## References and Acknowledgments
 References from Mai's Branch
 
 U.S. Census Bureau. (2021). American Community Survey 5-Year Data (2017-2021). U.S. Census Bureau. This website was used to hep us find the variables for workers who work from home and gender. Retrieved November 2024, from https://www.census.gov/data/developers/data-sets/acs-5year.2021.html#list-tab-1806015614
