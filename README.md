@@ -1,6 +1,27 @@
 # home-based-workers
 
+For this project, we are analyzing data from the Census Bureau to answer these following questions:
+
+1) What are the most popular remote job fields?
+2) What states do most remote workers live in?
+3) How does the percentage of remote workers relate to the median household income across different states in 2022?
+4) Have the numbers of female and male workers working from home changed over time?
+
+To answer the question number 2 - 
+
+Run the Census_ACS_Data.ipynb file from step 1 to 7 to see how we analyized the data.
+Run the Census_ACS_Data.ipynb file from step 8 to 10 to see how we created bar graph.
+
+To answer the question number 4 -
+
+Run the Census_ACS_Data.ipynb file from step 11 to 13 to see how we analyized the data.
+Run the Census_ACS_Data.ipynb file from step 14 to 17 to see how to see how we did a line regression.
+
+We also wrote down our analysis and conclusions. To read the report, please read our Remote Workers Analysis And Conclusion Report.
+
 References from Mai's Branch
+
+U.S. Census Bureau. (2021). American Community Survey 5-Year Data (2017-2021). U.S. Census Bureau. This website was used to hep us find the variables for workers who work from home and gender. Retrieved November 2024, from https://www.census.gov/data/developers/data-sets/acs-5year.2021.html#list-tab-1806015614
 
 OpenAI. (2023). ChatGPT (Mar 14 version) [Large language model]. Accessed on Nov 2024. I, Mai Houa Hang, used this website for help with step 4 on the Census_ACS_Data.ipynb to get the data for all states. It helped me with providing me this code: geo={"for": "state:*"} to use. It also helped me with how to convert the list of lists to a DataFrame with this code: “wfh_df = pd.DataFrame(data[1:], columns=data[0])”. I learned to use the map function names_state dictionary and replaces the FIPS code with the corresponding state name. I also learned to use pd.concat to help me combine multiple DataFrames vertically (i.e., stacking them on top of each other). I also used the parameter “ignore_index=True” to help ignoring the existing row/index labels and generate a new index instead. I also learned from this website to use astype(int) to convert the values in my columns to intergers so I can calculate them to percentages. The website also helped provide this method to me: .apply(lambda x: "{:.2f}%".format(x)) so that I can format the percentage columns to two decimal places and put a % symbol in there. Retrieved from https://chat.openai.com/chat
 
