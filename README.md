@@ -24,6 +24,7 @@ api_key = "YOUR KEY HERE"
 * Now, we can quickly pull our API data from the generated CSV file by running the [SIPP main file](/SIPP_main.ipynb)
   * This will also generate an intermediary CSV with income data for future statistical analysis.
 * At the bottom of the file, you will find pie charts looking at worker class, occupation type, and industry type for home-based workers. The summary pie charts are as follows:
+
 Percentages of Home-based Worker Classes
 ![A pie chart showing percentages of home-based worker classes.](./Resources/worker-class-pie-chart.png)
 Percentages of Home-based Workers' Top Occupation Types
