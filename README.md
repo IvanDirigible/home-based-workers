@@ -8,10 +8,12 @@ For this project, we are analyzing data from the Census Bureau to answer these f
 4) Have the numbers of female and male workers working from home changed over time?
 
 To answer the question number 2 - 
+
 Run the Census_ACS_Data.ipynb file from step 1 to 7 to see how we analyized the data.
 Run the Census_ACS_Data.ipynb file from step 8 to 10 to see how we created bar graph.
 
 To answer the question number 4 -
+
 Run the Census_ACS_Data.ipynb file from step 11 to 13 to see how we analyized the data.
 Run the Census_ACS_Data.ipynb file from step 14 to 17 to see how to see how we did a line regression.
 
