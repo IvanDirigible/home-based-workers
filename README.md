@@ -12,6 +12,7 @@ For this project, we are analyzing data from the Census Bureau to answer these f
 To determine the most popular remote job fields, begin by running the [SIPP compiler file](/SIPP_compiler.ipynb).
 This file makes the API calls to the Survey of Income and Program Participation 2022 database.
 In order to make these API calls, you will need a US Census API key, which can be easily acquired from the US Census website [here](https://api.census.gov/data/key_signup.html).
+You will have to install the Census library by opening a jupyter notebook and typing "!pip install census"
 
 * You will either need to create a file in the main directory called $${\color{red}config.py}$$.
 * Inside of your new config.py file, you will need to put the following code, replacing the text in the quotes with your API key:
